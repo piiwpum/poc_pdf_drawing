@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:pdf_annotation_poc/drawing/drawing_painter.dart';
 
@@ -143,8 +141,10 @@ class PdfViewPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          width: vm.pdfWidth,
-                          height: vm.pdfHeight,
+                          width:
+                              vm.pdfWidth, //set ตาม screen ของเครื่อง ของ PDF
+                          height:
+                              vm.pdfHeight, //set ตาม screen ของเครื่อง ของ PDF
                           child: CustomPaint(
                             painter: DrawingPainter(vm.strokes),
                           ),

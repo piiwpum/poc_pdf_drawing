@@ -36,9 +36,7 @@ class PdfViewModel extends ChangeNotifier {
 
   void onDocumentLoaded(PdfDocumentLoadedDetails details) {
     totalPage = details.document.pages.count;
-    // final firstPageSize = details.document.pages[0].size;
-    // final pdfWidth = firstPageSize.width;
-    // final pdfHeight = firstPageSize.height;
+    //ดึง size ของ PDF ให้ได้แล้วไป set ใน canvas อะ
   }
 
   void nextPage() {
@@ -162,12 +160,6 @@ class PdfViewModel extends ChangeNotifier {
 
   void setDrawing(bool draw) {
     isDrawing = draw;
-    notifyListeners();
-  }
-
-  void setPdfSize(double width, double height) {
-    pdfWidth = width;
-    pdfHeight = height;
     notifyListeners();
   }
 
